@@ -3,8 +3,16 @@ import "./ChatHistory.scss";
 import Message from "../Message/Message";
 
 class ChatHistory extends Component {
-    constructor(props) {
-        super(props);
+    render() {
+        console.log(this.props.ChatHistory);
+        this.props.ChatHistory.map(msg=><Message key={msg.timeStamp} mesage={Message.data} />);
+
+        return (
+            <div className="ChatHistory">
+                <h2>Chat History</h2>
+                {messages}
+            </div>
+        )
     }
 }
 
