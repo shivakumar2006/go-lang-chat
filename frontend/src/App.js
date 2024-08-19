@@ -6,7 +6,7 @@ import "./App.css";
 import {connect, sendMsg} from "./api";
 
 class App extends Component {
-    Constructor(props) {
+    constructor(props) {
         super(props);
         this.state = {
             ChatHistory: []

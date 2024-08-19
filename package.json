@@ -2,12 +2,15 @@
   "name": "chat-application",
   "version": "1.0.0",
   "main": "index.js",
-  "devDependencies": {},
   "scripts": {
+    "start": "node frontend",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "cjs-loader": "^0.1.0"
+  }
 }
