@@ -4,16 +4,15 @@ import "./Message.scss";
 class Message extends Component {
     constructor(props) {
         super(props);
-        let temp = JSON.parse(this.state.Message);
-        this.state= {
-            message: temp
+        let temp = JSON.parse(this.props.message);
+        this.state = {
+            message : temp
         }
     }
-
     render() {
         return (
             <div className="Message">
-                {this.state.Message.body};
+                {this.state.Message.body}
             </div>
         )
     }

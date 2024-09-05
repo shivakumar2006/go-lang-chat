@@ -3,7 +3,7 @@ import "./Header.scss";
 
 const Header = () => {
     <div className="header">
-        <h2>GO + React Chat App</h2>
+        <h2>Go and React Chat App</h2>
     </div>
 }
 

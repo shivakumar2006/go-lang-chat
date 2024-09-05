@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import Header from "./components/Header/Header";
-import ChatInput from "./components/ChatInput/ChatInput";
 import ChatHistory from "./components/ChatHistory/ChatHistory";
+import ChatInput from "./components/ChatInput/ChatInput";
 import "./App.css";
 import {connect, sendMsg} from "./api";
 
@@ -9,30 +9,28 @@ class App extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            ChatHistory: []
+            ChatHistory : []
         }
     }
 
     componentDidMount() {
         connect((msg) => {
-            console.log("new message");
+            console.log("New Message");
             this.setState(prevState => ({
-                chatHistory: [...prevState.chatHistory, msg]
+                chatHistory : [...prevState.chatHistory, msg]
             }))
             console.log(this.state);
         })
     }
-
     render() {
         return (
-            <div>
+            <div className="App">
                 <Header />
                 <ChatHistory chatHistory = {this.state.chatHistory} />
-                <ChatInput send = {this.send} />
+                <ChatInput chatInput = {this.send} />
             </div>
         )
     }
 }
 
 export default App;
-
